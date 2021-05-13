@@ -1,10 +1,13 @@
 function TOTAL(amount,Tip){
-    return amount+Tip
+    total = amount+Tip
+    total = total.toFixed(2)
+    return Number(total)
 }
 
 function TIP(amount, tip_per){
     Tip=(amount*tip_per)/100
-    return Tip
+    Tip = Tip.toFixed(2)
+    return Number(Tip)
 }
 /*
 const FUNCTIONS = {
@@ -27,17 +30,17 @@ function update(input1, input2, model){
     const {Tip} = model
     const {Total} = model
     //const newCounter = FUNCTIONS[input](counter)
-    const newbill = parseInt(input1)
-    const newtipper = parseInt(input2)
+    const newbill = Number(input1)
+    const newtipper = Number(input2)
     const newTip = TIP(newbill, newtipper)
     const newtotal = TOTAL(newbill, newTip)
     return {
         ...model,
         //counter: newCounter,
-        bill_amount: parseInt(newbill),
-        tip_per: parseInt(newtipper),
-        Tip: parseInt(newTip),
-        Total: parseInt(newtotal),
+        bill_amount: '$'+newbill,
+        tip_per: newtipper+'%',
+        Tip: '$'+newTip,
+        Total: '$'+newtotal,
         input1: input1,
         input2: input2
     }

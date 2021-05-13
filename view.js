@@ -31,8 +31,8 @@ function inputForm1(model){
     const message = 'Bill Amount?'  
     return inquirer.prompt([
         {
-            name: 'input',
-            type: 'input',
+            name: 'input1',
+            type: 'input1',
             message: message,
             default: input1
             /*
@@ -55,8 +55,8 @@ function inputForm2(model){
     const message = 'Tip(%)?'   
     return inquirer.prompt([
         {
-            name: 'input',
-            type: 'input',
+            name: 'input2',
+            type: 'input2',
             message: message,
             default: input2
             /*
