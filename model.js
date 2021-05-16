@@ -1,5 +1,4 @@
 initModel = {
-    //counter: 0,
     bill_amount: '$'+0,
     tip_per: 0+'%',
     Tip: '$'+0,
